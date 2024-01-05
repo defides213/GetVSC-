@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentAdminSystem
 {
-    internal class Subject
+    public class Subject
     {
         public int Code;
         public string Name;
@@ -18,9 +18,11 @@ namespace StudentAdminSystem
             Name = name;
             Credits = credits;
         }
-        public void printMessage()
+        public void PrintMessage()
         {
-            Console.WriteLine($"{Code} {Name} {Credits}");
+            Console.WriteLine($"Subject Code: {Code}");
+            Console.WriteLine($"Subject Name: {Name}");
+            Console.WriteLine($"Subject Grade: {Credits}\n");
         }
     }
 }

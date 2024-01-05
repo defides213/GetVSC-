@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-namespace GetVSC.Parprogramering
+namespace GetVSC.Parprogrameringuke2
 {
     public class ParTask
     {
