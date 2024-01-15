@@ -12,7 +12,7 @@ namespace BankAccount
 
         public override void Withdraw(int amount)
         {
-            if(Balance >= 100 || amount < 1000){ Console.WriteLine("No"); }
+            if(Balance <= 100){ Console.WriteLine("No");  return; }
             else { Balance -= amount; }
         }
     }

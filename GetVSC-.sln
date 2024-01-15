@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parprogrammeringuke7opp2", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccount", "BankAccount\BankAccount.csproj", "{71F5C778-B493-406A-A76A-8E8A8AFD0903}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codealong2024", "Codealong2024\Codealong2024.csproj", "{843D6978-B60F-4E90-9FDD-BF7039F1AA62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codealong2024", "Codealong2024\Codealong2024.csproj", "{843D6978-B60F-4E90-9FDD-BF7039F1AA62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BobtheBuilder", "BobtheBuilder\BobtheBuilder.csproj", "{6FCCCD19-76C0-46CE-AF29-D0D9DFDD5F04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{843D6978-B60F-4E90-9FDD-BF7039F1AA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{843D6978-B60F-4E90-9FDD-BF7039F1AA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{843D6978-B60F-4E90-9FDD-BF7039F1AA62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FCCCD19-76C0-46CE-AF29-D0D9DFDD5F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCCCD19-76C0-46CE-AF29-D0D9DFDD5F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCCCD19-76C0-46CE-AF29-D0D9DFDD5F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCCCD19-76C0-46CE-AF29-D0D9DFDD5F04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

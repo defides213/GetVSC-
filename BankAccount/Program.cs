@@ -9,8 +9,9 @@ namespace BankAccount
         {
             Console.WriteLine("Input your wallet amount");
             int wallet = int.Parse(Console.ReadLine());
-            Account account = new Account(1, 22134);
-            SavingAccount savingAccount = new SavingAccount(1, 100000);
+            Account account = new Account(1, 22000);
+            SavingAccount savingAccount = new SavingAccount(1, 10000);
+            CreditAccount creditAccount = new CreditAccount(1, 1000, -2000);
             string option = string.Empty;
             while(option != "0")
             {
@@ -21,18 +22,17 @@ namespace BankAccount
                     case "0":
                         break;
                     case "1":
-                        wallet = Deposit(account, savingAccount, wallet);
+                        wallet = Deposit(account, savingAccount, creditAccount, wallet);
                         break;
                     case "2":
-                        wallet = Withdraw(account, savingAccount, wallet);
+                        wallet = Withdraw(account, savingAccount, creditAccount, wallet);
                         break;
-
                 }
                 pause();
             }
         }
 
-        public static int Deposit(Account data, SavingAccount savingAccount, int wallet)
+        public static int Deposit(Account data, SavingAccount savingAccount, CreditAccount creditAccount, int wallet)
         {
 
             Console.Clear();
@@ -43,28 +43,20 @@ namespace BankAccount
             data.Deposit(amount);
             return wallet -= amount;
         }
-        public static int Withdraw(Account data, SavingAccount savingAccount, int wallet)
+        public static int Withdraw(Account data, SavingAccount savingAccount, CreditAccount creditAccount, int wallet)
         {
             Console.WriteLine($"Current Bank Balance {data.Balance}");
             Console.WriteLine($"Current Saving Balance {savingAccount.Balance}");
+            Console.WriteLine($"Current Credit {creditAccount.Balance} // {creditAccount.Credit}");
             string option = accountMenu();
             Console.Clear();
             Console.WriteLine($"You have {wallet} in your wallet currently");
             Console.WriteLine("how much would you like to withdraw?");
             int amount = int.Parse(Console.ReadLine());
-            if (option == "1")
-            {
-                data.Withdraw(amount);
-            }
-            else if(option == "2")
-            {
-                savingAccount.Withdraw(amount);
-            }
-            else if( option == "3")
-            {
-
-            }
-            return wallet -= amount;
+            if (option == "1") { data.Withdraw(amount); }
+            else if(option == "2") { savingAccount.Withdraw(amount); }
+            else if( option == "3") { creditAccount.Withdraw(amount); }
+            return wallet += amount;
         }
 
         public static string mainMenu()
@@ -83,8 +75,8 @@ namespace BankAccount
             string option;
             Console.WriteLine("  Which account are you using?");
             Console.WriteLine("| 1. Main Account");
-            Console.WriteLine("| 1. Savings Account");
-            Console.WriteLine("| 1. Credit Account");
+            Console.WriteLine("| 2. Savings Account");
+            Console.WriteLine("| 3. Credit Account");
             Console.WriteLine("| 0. Exit");
             return option = Console.ReadLine(); ;
         }
